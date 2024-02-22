@@ -1,8 +1,11 @@
-@props(['disabled' => false, 'key' => null])
+@props(['disabled' => false, 'key' => null, 'row' => 10])
 
-<input {{ $disabled ? 'disabled' : '' }} {!! $attributes->merge([
+<textarea {{ $disabled ? 'disabled' : '' }} {!! $attributes->merge([
     'class' => 'border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm',
+    'row' => $row
 ]) !!}>
+
+</textarea>
 
 @if (!empty($key))
     @error($key)
